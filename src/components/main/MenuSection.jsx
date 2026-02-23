@@ -2,7 +2,7 @@ import React from 'react';
 
 function MenuSection() {
     return (
-        <div className="bg-white py-12 md:py-24 px-4 md:px-12 lg:px-24 font-sans text-black">
+        <div className="bg-white pb-2 pt-10 md:pb-10 md:pt-20 px-4 md:px-12 lg:px-24 font-sans text-black">
             <div className="container mx-auto">
                 <div className="flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-12 mb-16 md:mb-20">
                     <div className="w-full lg:w-1/2">

@@ -4,6 +4,7 @@ import { Routes, Route, Link, NavLink, Outlet } from "react-router-dom";
 import HeroSection from "./components/main/HeroSection"
 import Navbar from './components/header/navbar';
 import MenuSection from './components/main/MenuSection';
+import DiscoverMenu from './components/main/DiscoverMenu';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <main>
         <HeroSection />
         <MenuSection />
+        <DiscoverMenu />
       </main>
 
 
