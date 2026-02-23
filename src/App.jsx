@@ -1,19 +1,25 @@
 import React from 'react'
 import { Routes, Route, Link, NavLink, Outlet } from "react-router-dom";
 
-import HomePage from "./layout/homePage"
+import HeroSection from "./components/main/HeroSection"
+import Navbar from './components/header/navbar';
+import MenuSection from './components/main/MenuSection';
 
 function App() {
   return (
     <>
+      <header>
+        <Navbar />
+      </header>
       <main>
-        <Outlet />
+        <HeroSection />
+        <MenuSection />
       </main>
 
 
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-      </Routes>
+      {/* <Routes>
+        <Route path="/" element={<HeroSection />} />
+      </Routes> */}
     </>
   )
 }
