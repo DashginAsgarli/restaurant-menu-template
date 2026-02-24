@@ -8,6 +8,7 @@ import DiscoverMenu from './components/main/DiscoverMenu';
 import SpecialOfferBanner from './components/main/SpecialOfferBanner'
 import FoodApp from './components/main/FoodApp'
 import ExpertsAndApp from './components/main/ExpertsAndApp'
+import DealAndEvents from  './components/main/DealAndEvents'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <SpecialOfferBanner />
         <FoodApp />
         <ExpertsAndApp />
+        <DealAndEvents />
       </main>
 
 
