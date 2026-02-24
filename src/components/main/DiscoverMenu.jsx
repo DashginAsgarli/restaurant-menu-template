@@ -48,7 +48,7 @@ const DiscoverMenu = () => {
                             </div>
 
                             <div className="absolute -bottom-4 left-6 md:left-10 transition-transform duration-500 group-hover:-translate-y-1">
-                                <div className="w-14 h-14 md:w-16 md:h-16 bg-[#fdb714] rounded-full flex flex-col items-center justify-center shadow-lg border-4 border-white">
+                                <div className="w-14 h-14 md:w-20 md:h-20 bg-[#fdb714] rounded-full flex flex-col items-center justify-center shadow-lg border-4 border-white">
                                     <span className="text-black font-black text-xs md:text-sm leading-none">
                                         {item.price}
                                     </span>

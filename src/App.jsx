@@ -5,6 +5,7 @@ import HeroSection from "./components/main/HeroSection"
 import Navbar from './components/header/navbar';
 import MenuSection from './components/main/MenuSection';
 import DiscoverMenu from './components/main/DiscoverMenu';
+import SpecialOfferBanner from './components/main/SpecialOfferBanner'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <HeroSection />
         <MenuSection />
         <DiscoverMenu />
+        <SpecialOfferBanner />
       </main>
 
 
