@@ -31,11 +31,6 @@ function App() {
       <footer>
         <Footer/>
       </footer>
-
-
-      {/* <Routes>
-        <Route path="/" element={<HeroSection />} />
-      </Routes> */}
     </>
   )
 }
