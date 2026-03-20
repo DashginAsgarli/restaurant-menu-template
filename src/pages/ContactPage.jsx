@@ -41,7 +41,7 @@ function ContactPage() {
                             { icon: <FiClock size={20} />, label: 'Working Hours', val: 'Monday – Saturday: 10:00 – 23:00' },
                         ].map(item => (
                             <div key={item.label} className="flex items-start gap-4 bg-gray-50 rounded-2xl p-5">
-                                <div className="w-12 h-12 bg-[#ff3131] text-white rounded-xl flex items-center justify-center flex-shrink-0">
+                                <div className="w-12 h-12 bg-[#ff3131] text-white rounded-xl flex items-center justify-center shrink-0">
                                     {item.icon}
                                 </div>
                                 <div>

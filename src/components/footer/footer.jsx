@@ -5,11 +5,11 @@ function FinalSections() {
     return (
         <div className="bg-white font-sans overflow-hidden">
 
-            <footer className="bg-[#f9fcff] pt-16 md:pt-20 lg:pt-24 pb-8 px-6 relative border-t border-gray-50">
-                <div className="container mx-auto">
+            <footer className="bg-[#f9fcff] px-5 md:px-20 py-10 md:py-10 relative border-t border-gray-50">
+                <div >
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-16 items-start">
 
-                        <div className="bg-[#ff3131] p-8 rounded-[40px] text-white shadow-2xl relative overflow-hidden group">
+                        <div className="bg-[#ff3131] p-8 rounded-3xl text-white shadow-2xl relative overflow-hidden group">
                             <div className="absolute -right-4 -top-4 w-20 h-20 bg-white/10 rounded-full blur-2xl group-hover:bg-white/20 transition-all"></div>
                             <h3 className="text-2xl font-black mb-6 italic tracking-tighter">TasteNest</h3>
                             <div className="space-y-4 text-sm font-medium">
@@ -57,7 +57,7 @@ function FinalSections() {
                         </div>
                     </div>
 
-                    <div className="mt-16 lg:mt-24 pt-8 border-t border-gray-100">
+                    <div className="mt-8 pt-4 border-t border-gray-100">
                         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                             <p className="text-gray-400 text-[10px] md:text-xs font-bold tracking-tight text-center">
                                 <span className="text-[#ff3131]">© 2026 TASTENEST</span> | CRAFTED BY SHAWONETC3

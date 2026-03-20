@@ -80,7 +80,7 @@ function AboutAndSponsors() {
                                     {menu.category}
                                 </h3>
 
-                                <div className="space-y-3 md:space-y-4 lg:space-y-6 flex-grow">
+                                <div className="space-y-3 md:space-y-4 lg:space-y-6 grow">
                                     {menu.items.map((item, i) => (
                                         <div key={i} className="group">
                                             <div className="flex justify-between items-baseline gap-2 mb-0.5">

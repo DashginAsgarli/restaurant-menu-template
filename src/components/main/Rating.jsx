@@ -3,11 +3,11 @@ import { FaStar } from 'react-icons/fa';
 
 function Rating() {
     return (
-        <div className="bg-white min-h-screen font-sans text-gray-800">
-            <main className="max-w-6xl mx-auto px-4 py-8 space-y-16">
+        <div className="bg-white font-sans text-gray-800">
+            <main className=" px-5 md:px-20 py-8 space-y-16">
 
-                <section className="py-6 md:py-10">
-                    <div className="relative bg-white border-2 border-gray-50 rounded-[35px] md:rounded-[45px] shadow-xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 md:gap-10 max-w-5xl mx-auto overflow-hidden">
+                <section >
+                    <div className="relative bg-white border-2 border-gray-50 rounded-3xl shadow-xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 md:gap-10  overflow-hidden">
                         <div className="absolute top-0 left-0 w-1.5 h-full bg-[#fdb714]"></div>
 
                         <div className="text-center md:w-1/3 md:border-r border-gray-100 md:pr-8 w-full">
@@ -17,7 +17,7 @@ function Rating() {
                             </div>
                             <p className="text-gray-400 text-[9px] md:text-[10px] font-bold uppercase tracking-widest mb-4">5000+ Reviews</p>
 
-                            <div className="space-y-1 max-w-[180px] mx-auto">
+                            <div className="space-y-1 max-w-45 mx-auto">
                                 {[95, 5, 0, 0, 0].map((percent, i) => (
                                     <div key={i} className="flex items-center gap-2">
                                         <span className="text-[9px] font-bold text-gray-500 w-2">{5 - i}</span>
@@ -31,7 +31,7 @@ function Rating() {
                         </div>
 
                         <div className="md:w-2/3 w-full text-center md:text-left">
-                            <div className="hidden md:block text-[#fdb714] opacity-20 mb-[-10px] text-4xl font-serif">"</div>
+                            <div className="hidden md:block text-[#fdb714] opacity-20 -mb-3 text-4xl font-serif">"</div>
 
                             <p className="text-gray-600 italic text-sm md:text-[13px] lg:text-base leading-snug md:leading-relaxed mb-5">
                                 "Botanica rice crackers are a staple in my pantry. They are a healthier alternative to traditional crackers and chips, but still satisfy my craving for something spicy and crunchy. Chilli garlic flavor is my personal favorite - it's so delicious!"

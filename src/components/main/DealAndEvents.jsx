@@ -2,9 +2,9 @@ import React from 'react';
 
 function DealAndEvents() {
     return (
-        <div className="bg-white font-sans py-8 md:py-12 lg:py-20">
-            <div className="container mx-auto px-6">
-                <section className="max-w-7xl mx-auto border-[3px] border-[#fdb714] rounded-[35px] md:rounded-[50px] p-4 md:p-6 lg:p-8 flex flex-col md:flex-row items-center gap-6 lg:gap-12 bg-white">
+        <div className="bg-white font-sans px-5 md:px-20 py-10 md:py-20">
+            <div>
+                <section className="max-w-7xl mx-auto border-[3px] border-[#fdb714] rounded-3xl p-4 md:p-6 lg:p-8 flex flex-col md:flex-row items-center gap-6 lg:gap-12 bg-white">
                     <div className="w-full md:w-1/2 grid grid-cols-2 gap-2 md:gap-3 lg:gap-4">
                         <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=400&fit=crop" className="rounded-tl-[25px] md:rounded-tl-[40px] rounded-br-[25px] md:rounded-br-[40px] h-24 md:h-32 lg:h-44 w-full object-cover shadow-md" alt="dining 1" />
                         <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=400&fit=crop" className="rounded-tr-[25px] md:rounded-tr-[40px] rounded-bl-[25px] md:rounded-bl-[40px] h-24 md:h-32 lg:h-44 w-full object-cover shadow-md" alt="dining 2" />

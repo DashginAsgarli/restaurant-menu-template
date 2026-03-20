@@ -9,7 +9,7 @@ function CartDrawer({ onClose }) {
         <>
             <div className="fixed inset-0 z-200 bg-black/50" onClick={onClose} />
 
-            <div className="fixed top-0 right-0 h-full w-full max-w-[420px] bg-white z-[210] shadow-2xl flex flex-col">
+            <div className="fixed top-0 right-0 h-full w-full max-w-104 bg-white z-210 shadow-2xl flex flex-col">
 
                 <div className="flex items-center justify-between p-6 border-b border-gray-100">
                     <div className="flex items-center gap-3">
@@ -45,7 +45,7 @@ function CartDrawer({ onClose }) {
                             {cartItems.map(item => (
                                 <div key={item.id} className="flex items-center gap-4 bg-gray-50 rounded-2xl p-3">
 
-                                    <img src={item.image} alt={item.title} className="w-16 h-16 rounded-xl object-cover flex-shrink-0" />
+                                    <img src={item.image} alt={item.title} className="w-16 h-16 rounded-xl object-cover shrink-0" />
 
                                     <div className="flex-1 min-w-0">
                                         <h4 className="font-bold text-sm text-gray-800 truncate">{item.title}</h4>
@@ -62,7 +62,7 @@ function CartDrawer({ onClose }) {
                                         </div>
                                     </div>
 
-                                    <button onClick={() => removeFromCart(item.id)} className="p-2 text-gray-300 hover:text-[#ff3131] transition flex-shrink-0">
+                                    <button onClick={() => removeFromCart(item.id)} className="p-2 text-gray-300 hover:text-[#ff3131] transition shrink-0">
                                         <FiTrash2 size={16} />
                                     </button>
                                 </div>

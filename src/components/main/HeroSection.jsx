@@ -51,7 +51,7 @@ function HeroSection() {
     }, []);
 
     return (
-        <section className="mt-10 lg:mt-20 relative w-full  h-[450px] md:h-[500px] lg:h-screen overflow-hidden bg-black">
+        <section className="mt-10 lg:mt-20 relative w-full  h-112 md:h-124 lg:h-screen overflow-hidden bg-black">
             {slides.map((slide, index) => (
                 <div key={slide.id} className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out flex items-center ${index === current ? "opacity-100 z-10" : "opacity-0 z-0"}`}
                     style={{ backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.3)), url(${slide.img})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>

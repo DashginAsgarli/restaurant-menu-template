@@ -4,8 +4,8 @@ import sale from "../../assets/sale.png"
 
 function SpecialOfferBanner() {
     return (
-        <div className="container mx-auto px-4  lg:px-16 mt-6">
-            <div className="w-full bg-[#FFD95A] rounded-[20px] md:rounded-[30px] overflow-hidden relative mb-16 flex flex-col lg:flex-row items-stretch min-h-[350px] lg:min-h-[400px] shadow-2xl">
+        <div className="px-5 md:px-20 py-10 md:py-10">
+            <div className="w-full bg-[#FFD95A] rounded-3xl overflow-hidden relative flex flex-col lg:flex-row items-stretch min-h-86 lg:min-h-100 shadow-2xl">
 
                 <div className="bg-white w-full lg:w-[50%] p-8 md:p-10 lg:p-14 flex flex-col justify-center z-10 relative" style={{ clipPath: typeof window !== 'undefined' && window.innerWidth > 1024 ? 'polygon(0 0, 100% 0, 92% 100%, 0% 100%)' : 'none' }}>
                     <div className="space-y-4">
@@ -55,7 +55,7 @@ function SpecialOfferBanner() {
                     </div>
 
                     <div className="relative z-10 transition-transform hover:scale-105 duration-700">
-                        <img src={sale} alt="Delicious Burger" className="w-[250px] sm:w-[320px] md:w-[400px] lg:w-[460px] drop-shadow-[0_20px_20px_rgba(0,0,0,0.3)]" />
+                        <img src={sale} alt="Delicious Burger" className="w-62 sm:w-[320px] md:w-100 lg:w-114 drop-shadow-[0_20px_20px_rgba(0,0,0,0.3)]" />
                     </div>
 
                     <div className="absolute top-8 right-10 text-center -rotate-12 hidden lg:block">

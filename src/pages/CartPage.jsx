@@ -65,7 +65,7 @@ function CartPage() {
                         <div className="lg:col-span-2 space-y-4">
                             {cartItems.map(item => (
                                 <div key={item.id} className="flex items-center gap-4 bg-gray-50 rounded-2xl p-4">
-                                    <img src={item.image} alt={item.title} className="w-20 h-20 rounded-xl object-cover flex-shrink-0" />
+                                    <img src={item.image} alt={item.title} className="w-20 h-20 rounded-xl object-cover shrink-0" />
 
                                     <div className="flex-1 min-w-0">
                                         <h4 className="font-bold text-gray-800 truncate">{item.title}</h4>
@@ -82,7 +82,7 @@ function CartPage() {
                                         </button>
                                     </div>
 
-                                    <div className="text-right min-w-[60px]">
+                                    <div className="text-right min-w-15">
                                         <span className="font-black text-gray-800">${(item.price * item.quantity).toFixed(2)}</span>
                                     </div>
 

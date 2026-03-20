@@ -28,8 +28,8 @@ function FoodApp() {
     ];
 
     const renderCard = (item) => (
-        <div key={item.id} className={`  bg-white rounded-2xl shadow-sm border border-gray-100 relative overflow-hidden flex group transition-all hover:shadow-md  ${item.isLarge ? 'flex-col h-full' : 'flex-col sm:flex-row h-full sm:h-[140px] lg:h-[160px]'}`}>
-            <div className={`relative overflow-hidden ${item.isLarge ? 'w-full h-[250px] md:h-full' : 'w-full sm:w-[130px] lg:w-[170px] h-[180px] sm:h-full flex-shrink-0'}`}>
+        <div key={item.id} className={`  bg-white rounded-2xl shadow-sm border border-gray-100 relative overflow-hidden flex group transition-all hover:shadow-md  ${item.isLarge ? 'flex-col h-full' : 'flex-col sm:flex-row h-full 6 lg:h-40'}`}>
+            <div className={`relative overflow-hidden ${item.isLarge ? 'w-full h-62 md:h-full' : 'w-full sm:w-32 lg:w-42 h-46 sm:h-full shrink-0'}`}>
                 <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 {item.discount && <div className="absolute top-3 left-3 bg-[#FFE100] text-black text-[10px] font-extrabold px-2 py-1 rounded z-10">⚡ {item.discount}</div>}
                 <button className="absolute top-3 right-3 p-2 bg-white/90 rounded-full text-gray-400 hover:text-red-500 z-10"><FaRegHeart size={14} /></button>
@@ -37,7 +37,7 @@ function FoodApp() {
                 {item.isLarge && (
                     <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-2 px-4">
                         {[{ v: '266', l: 'Dəq' }, { v: '04', l: 'Saat' }, { v: '56', l: 'Dəq' }].map((t, i) => (
-                            <div key={i} className="bg-white/95 backdrop-blur shadow-lg rounded-md py-1 px-2 min-w-[45px] text-center">
+                            <div key={i} className="bg-white/95 backdrop-blur shadow-lg rounded-md py-1 px-2 min-w-12 text-center">
                                 <div className="text-[10px] font-bold text-gray-800">{t.v}</div>
                                 <div className="text-[7px] text-gray-400 uppercase font-medium">{t.l}</div>
                             </div>
@@ -46,7 +46,7 @@ function FoodApp() {
                 )}
             </div>
 
-            <div className={`p-4 flex flex-col justify-center flex-grow ${item.isLarge ? 'items-center text-center' : 'items-start'}`}>
+            <div className={`p-4 flex flex-col justify-center grow ${item.isLarge ? 'items-center text-center' : 'items-start'}`}>
                 <div className={`flex items-center gap-0.5 mb-1 ${item.isLarge ? 'justify-center' : ''}`}>
                     {[...Array(5)].map((_, i) => <FaStar key={i} className={`text-[10px] ${i < 1 ? 'text-orange-400' : 'text-gray-200'}`} />)}
                 </div>
@@ -65,8 +65,8 @@ function FoodApp() {
     );
 
     return (
-        <div className="bg-[#F9FAFB] min-h-screen p-4 md:p-8">
-            <div className="max-w-7xl mx-auto">
+        <div className="bg-[#F9FAFB]  px-5 md:px-20 py-10 md:py-20">
+            <div>
 
                 <div className="block sm:hidden">
                     <Swiper modules={[Pagination, Autoplay]} spaceBetween={20} slidesPerView={1} pagination={{ clickable: true }} autoplay={{ delay: 3000 }} className="pb-10">

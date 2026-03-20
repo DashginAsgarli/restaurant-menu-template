@@ -27,7 +27,7 @@ function ProfilePage() {
 
                 <h1 className="text-3xl font-black tracking-tight mb-10">My Profile</h1>
                 <div className="flex items-center gap-6 mb-10 p-6 bg-gray-50 rounded-3xl">
-                    <div className="w-20 h-20 bg-[#ff3131] rounded-full flex items-center justify-center text-white font-black text-3xl flex-shrink-0">
+                    <div className="w-20 h-20 bg-[#ff3131] rounded-full flex items-center justify-center text-white font-black text-3xl shrink-0">
                         {user?.name?.[0]?.toUpperCase()}
                     </div>
                     <div className="flex-1">

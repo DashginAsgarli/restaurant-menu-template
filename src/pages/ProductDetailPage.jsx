@@ -58,7 +58,7 @@ function ProductDetailPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
 
-                    <div className="relative rounded-3xl overflow-hidden bg-gray-50 h-80 md:h-[450px]">
+                    <div className="relative rounded-3xl overflow-hidden bg-gray-50 h-80 md:h-112">
                         <img src={product.image} alt={product.title} className="w-full h-full object-cover" />
                         {product.discount && (
                             <span className="absolute top-4 left-4 bg-[#FFE100] text-black text-xs font-extrabold px-3 py-1.5 rounded-lg">
