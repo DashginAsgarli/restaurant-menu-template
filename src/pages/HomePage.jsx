@@ -15,7 +15,6 @@ function HomePage() {
             <MenuSection />
             <DiscoverMenu />
             <SpecialOfferBanner />
-            <FoodApp />
             <ExpertsAndApp />
             <DealAndEvents />
             <Rating />

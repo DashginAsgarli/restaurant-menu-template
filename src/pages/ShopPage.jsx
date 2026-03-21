@@ -4,6 +4,7 @@ import { FiSearch, FiHeart, FiShoppingBag } from 'react-icons/fi'
 import { FaStar } from 'react-icons/fa'
 import { useCart } from '../context/CartContext'
 import { useWishlist } from '../context/WishlistContext'
+import FoodApp from '../components/main/FoodApp'
 
 const ALL_PRODUCTS = [
     { id: 2, title: 'Butter Chicken', price: 18, category: 'Dinner', rating: 4, image: 'https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=400&fit=crop' },
@@ -38,88 +39,91 @@ function ShopPage() {
     if (sortBy === 'rating') filtered = [...filtered].sort((a, b) => b.rating - a.rating)
 
     return (
-        <div className="bg-white min-h-screen pt-28 pb-20 px-6 md:px-12 lg:px-24 font-sans">
+        <>
+            <div className="bg-white min-h-screen pt-28 pb-20 px-6 md:px-10 lg:px-24 font-sans">
 
-            <div className="text-center mb-12">
-                <h1 className="text-4xl md:text-5xl font-black tracking-tight mb-2">Our <span className="text-[#ff3131]">Menu</span></h1>
-                <p className="text-gray-400 font-medium">Discover the most delicious dishes</p>
-            </div>
-
-            <div className="flex flex-col md:flex-row gap-4 mb-10 items-center justify-between max-w-5xl mx-auto">
-
-                <div className="relative w-full md:w-72">
-                    <FiSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={16} />
-                    <input type="text" placeholder="Search food..." value={search} onChange={e => setSearch(e.target.value)} className="w-full pl-11 pr-4 py-3 border-2 border-gray-100 rounded-xl text-sm font-medium focus:border-[#ff3131] outline-none transition" />
+                <div className="text-center mb-12">
+                    <h1 className="text-4xl md:text-5xl font-black tracking-tight mb-2">Our <span className="text-[#ff3131]">Menu</span></h1>
+                    <p className="text-gray-400 font-medium">Discover the most delicious dishes</p>
                 </div>
 
-                <div className="flex gap-2 flex-wrap justify-center">
-                    {CATEGORIES.map(cat => (
-                        <button key={cat} onClick={() => setActiveCategory(cat)} className={`px-5 py-2 rounded-full text-sm font-bold transition-all ${activeCategory === cat ? 'bg-[#ff3131] text-white shadow-md' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}>
-                            {cat}
-                        </button>
-                    ))}
+                <div className="flex flex-col md:flex-row gap-4 mb-10 items-center justify-between max-w-5xl mx-auto">
+
+                    <div className="relative w-full md:w-72">
+                        <FiSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={16} />
+                        <input type="text" placeholder="Search food..." value={search} onChange={e => setSearch(e.target.value)} className="w-full pl-11 pr-4 py-3 border-2 border-gray-100 rounded-xl text-sm font-medium focus:border-[#ff3131] outline-none transition" />
+                    </div>
+
+                    <div className="flex gap-2 flex-wrap justify-center">
+                        {CATEGORIES.map(cat => (
+                            <button key={cat} onClick={() => setActiveCategory(cat)} className={`px-5 py-2 rounded-full text-sm font-bold transition-all ${activeCategory === cat ? 'bg-[#ff3131] text-white shadow-md' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}>
+                                {cat}
+                            </button>
+                        ))}
+                    </div>
+
+                    <select value={sortBy} onChange={e => setSortBy(e.target.value)} className="border-2 border-gray-100 rounded-xl px-4 py-3 text-sm font-bold text-gray-600 focus:border-[#ff3131] outline-none">
+                        <option value="default">Sort by</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="rating">Top Rated</option>
+                    </select>
                 </div>
 
-                <select value={sortBy} onChange={e => setSortBy(e.target.value)} className="border-2 border-gray-100 rounded-xl px-4 py-3 text-sm font-bold text-gray-600 focus:border-[#ff3131] outline-none">
-                    <option value="default">Sort by</option>
-                    <option value="price-asc">Price: Low to High</option>
-                    <option value="price-desc">Price: High to Low</option>
-                    <option value="rating">Top Rated</option>
-                </select>
-            </div>
+                {filtered.length === 0 ? (
+                    <div className="text-center py-20 text-gray-400 font-bold">
+                        No results found
+                    </div>
+                ) : (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                        {filtered.map(product => (
+                            <div key={product.id} className="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition group overflow-hidden">
 
-            {filtered.length === 0 ? (
-                <div className="text-center py-20 text-gray-400 font-bold">
-                    No results found
-                </div>
-            ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-                    {filtered.map(product => (
-                        <div key={product.id} className="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition group overflow-hidden">
-
-                            <div className="relative overflow-hidden h-48">
-                                <img src={product.image} alt={product.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-                                {product.discount && (
-                                    <span className="absolute top-3 left-3 bg-[#FFE100] text-black text-[10px] font-extrabold px-2 py-1 rounded">
-                                        ⚡ {product.discount}
-                                    </span>
-                                )}
-                                <button onClick={() => toggleWishlist(product)} className="absolute top-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow hover:scale-110 transition">
-                                    <FiHeart size={14} className={isWishlisted(product.id) ? 'text-[#ff3131] fill-[#ff3131]' : 'text-gray-400'} style={{ fill: isWishlisted(product.id) ? '#ff3131' : 'none' }} />
-                                </button>
-                            </div>
-
-                            <div className="p-4">
-                                <div className="flex gap-0.5 mb-2">
-                                    {[...Array(5)].map((_, i) => (
-                                        <FaStar key={i} size={10} className={i < product.rating ? 'text-[#fdb714]' : 'text-gray-200'} />
-                                    ))}
-                                </div>
-
-                                <Link to={`/shop/${product.id}`}>
-                                    <h3 className="font-bold text-gray-800 text-sm uppercase mb-1 hover:text-[#ff3131] transition truncate">
-                                        {product.title}
-                                    </h3>
-                                </Link>
-
-                                <div className="flex items-center justify-between mt-2">
-                                    <div className="flex items-center gap-2">
-                                        <span className="text-[#ff3131] font-black text-lg">${product.price}</span>
-                                        {product.oldPrice && (
-                                            <span className="text-gray-300 line-through text-xs">${product.oldPrice}</span>
-                                        )}
-                                    </div>
-
-                                    <button onClick={() => addToCart(product)} className="w-9 h-9 bg-gray-50 hover:bg-[#ff3131] hover:text-white text-gray-600 rounded-full flex items-center justify-center border border-gray-100 transition">
-                                        <FiShoppingBag size={15} />
+                                <div className="relative overflow-hidden h-48">
+                                    <img src={product.image} alt={product.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                                    {product.discount && (
+                                        <span className="absolute top-3 left-3 bg-[#FFE100] text-black text-[10px] font-extrabold px-2 py-1 rounded">
+                                            ⚡ {product.discount}
+                                        </span>
+                                    )}
+                                    <button onClick={() => toggleWishlist(product)} className="absolute top-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow hover:scale-110 transition">
+                                        <FiHeart size={14} className={isWishlisted(product.id) ? 'text-[#ff3131] fill-[#ff3131]' : 'text-gray-400'} style={{ fill: isWishlisted(product.id) ? '#ff3131' : 'none' }} />
                                     </button>
                                 </div>
+
+                                <div className="p-4">
+                                    <div className="flex gap-0.5 mb-2">
+                                        {[...Array(5)].map((_, i) => (
+                                            <FaStar key={i} size={10} className={i < product.rating ? 'text-[#fdb714]' : 'text-gray-200'} />
+                                        ))}
+                                    </div>
+
+                                    <Link to={`/shop/${product.id}`}>
+                                        <h3 className="font-bold text-gray-800 text-sm uppercase mb-1 hover:text-[#ff3131] transition truncate">
+                                            {product.title}
+                                        </h3>
+                                    </Link>
+
+                                    <div className="flex items-center justify-between mt-2">
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-[#ff3131] font-black text-lg">${product.price}</span>
+                                            {product.oldPrice && (
+                                                <span className="text-gray-300 line-through text-xs">${product.oldPrice}</span>
+                                            )}
+                                        </div>
+
+                                        <button onClick={() => addToCart(product)} className="w-9 h-9 bg-gray-50 hover:bg-[#ff3131] hover:text-white text-gray-600 rounded-full flex items-center justify-center border border-gray-100 transition">
+                                            <FiShoppingBag size={15} />
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    ))}
-                </div>
-            )}
-        </div>
+                        ))}
+                    </div>
+                )}
+            </div>
+            <FoodApp/>
+        </>
     )
 }
 

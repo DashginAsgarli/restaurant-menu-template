@@ -65,7 +65,7 @@ function FoodApp() {
     );
 
     return (
-        <div className="bg-[#F9FAFB]  px-5 md:px-20 py-10 md:py-20">
+        <div className=" px-5 md:px-24 py-10 md:py-20">
             <div>
 
                 <div className="block sm:hidden">
