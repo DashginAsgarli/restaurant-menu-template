@@ -55,7 +55,7 @@ function HeroSection() {
                     <div className="container mx-auto px-6 md:px-10">
                         <div className="max-w-xl md:max-w-2xl lg:max-w-3xl text-white space-y-4 lg:space-y-6 animate-fadeIn">
                             {slide.subTitle && (
-                                <h4 className="text-red-500 font-bold uppercase tracking-[2px] lg:tracking-[4px] text-[10px] lg:text-base wrap-break-word max-w-[140px] md:max-w-xl ">
+                                <h4 className="text-red-500 font-bold uppercase tracking-[2px] lg:tracking-[4px] text-[10px] lg:text-base wrap-break-word max-w-35 md:max-w-xl ">
                                     {slide.subTitle}
                                 </h4>
                             )}
