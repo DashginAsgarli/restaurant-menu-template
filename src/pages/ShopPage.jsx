@@ -62,12 +62,7 @@ function ShopPage() {
                         ))}
                     </div>
 
-                    <select value={sortBy} onChange={e => setSortBy(e.target.value)} className="border-2 border-gray-100 rounded-xl px-4 py-3 text-sm font-bold text-gray-600 focus:border-[#ff3131] outline-none">
-                        <option value="default">Sort by</option>
-                        <option value="price-asc">Price: Low to High</option>
-                        <option value="price-desc">Price: High to Low</option>
-                        <option value="rating">Top Rated</option>
-                    </select>
+                   
                 </div>
 
                 {filtered.length === 0 ? (
