@@ -44,45 +44,15 @@ TasteNest is a full-featured restaurant web app with a clean, responsive UI. Use
 
 ```
 src/
-│
-├── 📄 main.jsx                      ← BrowserRouter + all Providers
-├── 📄 App.jsx                       ← Route definitions
-├── 📄 index.css
-│
-├── 📁 assets/                       ← Images, SVGs
-│
+├── 📁 assets/                      
 ├── 📁 context/
-│   ├── AuthContext.jsx           ← Login, Register, Logout state
-│   ├── CartContext.jsx           ← Cart items, quantities, totals
-│   └── WishlistContext.jsx      ← Saved / favourite products
-│
 ├── 📁 components/
 │   ├── 📁 auth/
-│   │   ├── AuthModal.jsx            ← Login / Register modal
-│   │   └── ProtectedRoute.jsx       ← Redirects unauthenticated users
 │   ├── 📁 cart/
-│   │   └── CartDrawer.jsx           ← Slide-in cart panel
 │   ├── 📁 header/
-│   │   └── Navbar.jsx
 │   ├── 📁 footer/
-│   │   └── Footer.jsx
 │   └── 📁 main/
-│       ├── HeroSection.jsx
-│       ├── MenuSection.jsx
-│       ├── DiscoverMenu.jsx
-│       ├── SpecialOfferBanner.jsx
-│       └── ...
-│
 └── 📁 pages/
-    ├── HomePage.jsx
-    ├── ShopPage.jsx
-    ├── ProductDetailPage.jsx
-    ├── CartPage.jsx
-    ├── WishlistPage.jsx          ← Protected
-    ├── ProfilePage.jsx           ← Protected
-    ├── AboutPage.jsx
-    ├── ContactPage.jsx
-    └── NotFoundPage.jsx
 ```
 
 ---
