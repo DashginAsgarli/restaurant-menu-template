@@ -18,7 +18,6 @@ TasteNest is a full-featured restaurant web app with a clean, responsive UI. Use
 <br />
 
 >[!TIP]
-> - **Authentication** - Modal-based login and register with input validation and password show/hide toggle. <br/>
 > - **Shopping Cart** - Add, remove, increase and decrease quantity. Live badge count on the navbar icon. <br/>
 > - **Wishlist** - Save and manage favourite items. Requires login — protected route. <br/>
 > - **Shop Filtering** - Filter by category, search by name, sort by price or rating in real time. <br/>
@@ -26,7 +25,6 @@ TasteNest is a full-featured restaurant web app with a clean, responsive UI. Use
 > - **Cart Page** - Order summary, delivery fee calculation, promo code input field. <br/>
 > - **Profile Page** - User stats, order history, editable display name. <br/>
 > - **Contact Form** - Working form with success state feedback on submission. <br/>
-> - **Responsive** - Mobile-first. Works on all screen sizes out of the box. <br/>
 
 ---
 
@@ -77,9 +75,6 @@ cd restaurant-menu-template
 
 # Install dependencies
 npm install
-
-# Install required packages (if missing)
-npm install react-router-dom react-icons
 
 # Start the development server
 npm run dev
