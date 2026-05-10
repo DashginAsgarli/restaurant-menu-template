@@ -42,18 +42,17 @@ TasteNest is a full-featured restaurant web app with a clean, responsive UI. Use
 
 ```
 src/
-├── 📁 assets/                      
-├── 📁 context/
-├── 📁 components/
-│   ├── 📁 auth/
-│   ├── 📁 cart/
-│   ├── 📁 header/
-│   ├── 📁 footer/
-│   └── 📁 main/
-└── 📁 pages/
+├── assets/                      
+├── context/
+├── components/
+│   ├── auth/
+│   ├── cart/
+│   ├── header/
+│   ├── footer/
+│   └── main/
+└── pages/
 ```
 
----
 
 ## ✦ Getting Started
 
@@ -64,7 +63,6 @@ src/
 
 <br />
 
-**Installation**
 
 ```bash
 # Clone the repository
@@ -80,7 +78,6 @@ npm install
 npm run dev
 ```
 
----
 
 ## ✦ Provider Wrapping Order
 
