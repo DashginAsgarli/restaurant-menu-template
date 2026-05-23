@@ -1,4 +1,4 @@
-# 🍽️ Modern Restaurant Web Application
+# Modern Restaurant Web Application
 
 <br/>
 <div>
@@ -13,9 +13,8 @@ TasteNest is a full-featured restaurant web app with a clean, responsive UI. Use
 
 ---
 
-## ✦ Features
+## Features
 
-<br />
 
 >[!TIP]
 > - **Shopping Cart** - Add, remove, increase and decrease quantity. Live badge count on the navbar icon. <br/>
@@ -28,7 +27,7 @@ TasteNest is a full-featured restaurant web app with a clean, responsive UI. Use
 
 ---
 
-## ✦ Tech Stack
+## Tech Stack
 
 ![React](https://img.shields.io/badge/-React_18-61DAFB?style=flat-square&logo=react&logoColor=black)
 ![Router](https://img.shields.io/badge/-React_Router_v6-CA4245?style=flat-square&logo=reactrouter&logoColor=white)
@@ -38,7 +37,7 @@ TasteNest is a full-featured restaurant web app with a clean, responsive UI. Use
 
 ---
 
-## ✦ Project Structure
+## Project Structure
 
 ```
 src/
@@ -54,7 +53,7 @@ src/
 ```
 
 
-## ✦ Getting Started
+## Getting Started
 
 **Prerequisites**
 
@@ -79,7 +78,7 @@ npm run dev
 ```
 
 
-## ✦ Provider Wrapping Order
+## Provider Wrapping Order
 
 ```jsx
 // main.jsx — wrap order matters
@@ -95,7 +94,7 @@ npm run dev
 ```
 ---
 
-## ✦ Notes
+## Notes
 
 > [!NOTE]
 > **Mock Authentication** — No backend is connected. Replace `login()` and `register()` in `AuthContext.jsx` with real API calls before deploying to production.
